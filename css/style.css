@@ -1,0 +1,39 @@
+
+body {
+    background: linear-gradient(to right, rgb(214, 240, 68) 0%, rgb(11, 141, 228) 100%, rgb(184, 146, 81) 100%);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-container {
+    cursor: pointer;
+    height: 140px;
+    perspective: 600;
+    position: relative;
+    width: 100px;
+    margin: 10px 50px;
+}
+.card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all .7s ease-in-out;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.card .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+.card .back {
+    transform: rotateY(180deg);
+    margin: -1px 0px 0px 2px;
+}
